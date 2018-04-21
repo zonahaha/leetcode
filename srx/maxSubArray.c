@@ -1,5 +1,6 @@
+#define MIN -2147483648
 int maxSubArray(int* nums, int numsSize) {
-    int res=0;
+    int res=MIN;
     int temp=0;
     for(int i=0;i<numsSize;i++){
         if(temp<0){

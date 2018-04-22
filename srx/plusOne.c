@@ -1,3 +1,8 @@
+/**
+ * Return an array of size *returnSize.返回的结果的大小是returnsize！要对应！
+ * Note: The returned array must be malloced, assume caller calls free().要malloc！！
+ */
+////////////////////就是因为上面这两句话！！！就一直报错！！！
 int *plusOne(int *digits, int digitsSize, int *returnSize) {   
     int k=0;
     int *res=(int*)malloc(sizeof(int)*digitsSize);//如果不分配，leetcode会报错提示空指针

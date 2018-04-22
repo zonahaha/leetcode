@@ -1,6 +1,4 @@
-int *plusOne(int *digits, int digitsSize, int *returnSize) {
-    
-    
+int *plusOne(int *digits, int digitsSize, int *returnSize) {   
     int k=0;
     int *res=(int*)malloc(sizeof(int)*digitsSize);//如果不分配，leetcode会报错提示空指针
     for (int i = digitsSize - 1; i >= 0; i--) {

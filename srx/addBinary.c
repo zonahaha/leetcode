@@ -7,7 +7,7 @@ char *addBinary(char *a, char *b) {
     int len1 = strlen(a) - 1;
     int len2 = strlen(b) - 1;
     int len = len1 > len2 ? len1 + 1 : len2 + 1;
-    res = malloc(sizeof(char) * (len+3));
+    res = malloc(sizeof(char) * (len+3));//重点！！！！！多申请一点！！！
     memset(res, '0', len+3);
     int j = len;
     int add = 0;

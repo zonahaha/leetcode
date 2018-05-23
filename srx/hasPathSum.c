@@ -27,3 +27,10 @@ bool hasPathSum(struct TreeNode* root, int sum) {
     if(!root)return false; 
     return addSum(root,sum);
 }
+////////////////////////////////////////////////////////////////////////另一种写法,不需要两个函数
+bool hasPathSum(struct TreeNode* root,int sum){
+    if(!root)return false;
+    if(!root->left&&!root->right){
+        return sum==root->val;//还能这样写，真厉害啊
+    }return hasPathSum(root->left,sum-root->val)||hasPathSum(root->right,sum-root->val);
+}

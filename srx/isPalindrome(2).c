@@ -26,3 +26,4 @@ bool isPalindrome(char* s) {
     }
     return true;
 }
+///////////////////////////////isalnum更快

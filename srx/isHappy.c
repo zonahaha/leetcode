@@ -20,3 +20,24 @@ bool isHappy(int n) {
     }
     return false;
 }
+/////////////////////////////////////////////////////////////////第二种算法，运用了弗洛伊德循环算法，就是快慢指针验证循环的同一原理,用来验证是否存在循环
+int floyd(int n){
+    int sum=0;
+    while(n){
+        int temp=n%10;
+        sum+=temp*temp;
+        n/=10;
+    }
+    return sum;
+}
+bool isHappy(int n) {
+    int fast,slow;
+    fast=slow=n;
+    do{
+        slow=floyd(slow);
+        fast=floyd(fast);
+        fast=floyd(fast);
+    }while(fast!=slow&&fast!=1);
+        if(fast==1)return true;
+        return false;
+}

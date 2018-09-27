@@ -13,7 +13,7 @@ vector<int> printKMax(int arr[], int n, int k){//
     if(q.pop()==i-k)q.pop_front();
     if(i>=k-1)res.push(arr[q.front()]);
   }
-  for(auto i:result)cout<<i<<" ";//输出结果
+  for(auto i:res)cout<<i<<" ";//输出结果
   return res;
 }
 
